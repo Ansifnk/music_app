@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import SideBar from './SideBar'
 
 const LayOut = () => {
+    
     return (
         <div className='w-100 vh-100 d-flex '>
 
