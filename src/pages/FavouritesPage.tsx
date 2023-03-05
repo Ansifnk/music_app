@@ -11,11 +11,16 @@ const FavouritesPage = () => {
             <div className='py-5 px-3' style={{ backgroundColor: "#3795BD" }} >
                 <h2 className='text-white ' >Your Favourites goes here...</h2>
             </div >
-            <div className='p-3 row '>
-                {
-                    favourites.map(music => <MusicItem music={music} />)
-                }
-            </div>
+            {favourites.length == 0 ?
+                <div className='d-flex mt-5 align-items-center justify-content-center' >
+                    <h3>Favourites is empty</h3>
+                </div> :
+                <div className='p-3 row '>
+                    {
+                        favourites.map(music => <MusicItem music={music} />)
+                    }
+                </div>
+            }
         </div>
     )
 }

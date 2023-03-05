@@ -25,8 +25,8 @@ const SideBar = () => {
       <div className='m-5' >
         <SideBarItem title='Home' path='/' />
         <SideBarItem title='Search' path='/search' />
-        <SideBarItem title='PlayLists' path='/' />
         <SideBarItem title='Favourites' path='/favourites' />
+        <SideBarItem title='PlayLists' path='/playlists' />
       </div>
     </div>
   )

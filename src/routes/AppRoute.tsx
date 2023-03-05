@@ -4,8 +4,7 @@ import LayOut from '../components/LayOut';
 import useAuth from '../hooks/useAuth';
 import FavouritesPage from '../pages/FavouritesPage';
 import HomePage from '../pages/HomePage';
-import LoginPage from '../pages/LoginPage';
-import RegisterPage from '../pages/RegisterPage';
+import PlayListsPage from '../pages/PlayListsPage';
 import SearchPage from '../pages/SearchPage';
 
 
@@ -17,16 +16,13 @@ const AppRoute = () => {
 
     return (
         <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
-            {/* <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} /> */}
 
-            <Route path='/' element={<LayOut />} >
+            {user && <Route path='/' element={<LayOut />} >
                 <Route path="/" element={<HomePage />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/favourites" element={<FavouritesPage />} />
-
-            </Route>
+                <Route path="/playlists" element={<PlayListsPage />} />
+            </Route>}
         </Routes>
     )
 }
