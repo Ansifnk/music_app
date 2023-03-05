@@ -7,6 +7,7 @@ interface ItemProps {
     setMusics: (musics: Music[]) => void
 }
 
+
 const SearchComp: FC<ItemProps> = ({ setMusics }) => {
 
     const [searchKey, setSearchKey] = useState<string>('')
@@ -23,6 +24,7 @@ const SearchComp: FC<ItemProps> = ({ setMusics }) => {
         };
         axios.request(options).then(function (response) {
             console.log(response.data);
+            
             let musics = response.data.tracks.hits.map((m: any) => ({ title: m.track.title,subTitle:m.track.subtitle,coverImage:m.track.images.background }))
             setMusics(musics)
 

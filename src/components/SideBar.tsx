@@ -26,7 +26,7 @@ const SideBar = () => {
         <SideBarItem title='Home' path='/' />
         <SideBarItem title='Search' path='/search' />
         <SideBarItem title='PlayLists' path='/' />
-        <SideBarItem title='Favourites' path='/' />
+        <SideBarItem title='Favourites' path='/favourites' />
       </div>
     </div>
   )

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Routes, Route, Outlet, Link, useNavigate } from "react-router-dom";
 import LayOut from '../components/LayOut';
 import useAuth from '../hooks/useAuth';
+import FavouritesPage from '../pages/FavouritesPage';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
@@ -12,7 +13,7 @@ const AppRoute = () => {
 
     const user = useAuth()
 
-   
+
 
     return (
         <Routes>
@@ -23,6 +24,7 @@ const AppRoute = () => {
             <Route path='/' element={<LayOut />} >
                 <Route path="/" element={<HomePage />} />
                 <Route path="/search" element={<SearchPage />} />
+                <Route path="/favourites" element={<FavouritesPage />} />
 
             </Route>
         </Routes>
