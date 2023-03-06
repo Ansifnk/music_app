@@ -12,8 +12,8 @@ const SideBar = () => {
 
   const SideBarItem: FC<ItemProps> = ({ title, path }) => (
     
-    <div className='mt-3 p-1 d-flex justify-content-center align-items-center cursor-pointer '
-      style={{ backgroundColor: '#9DC08B',cursor:'pointer' }}
+    <div role='button' className='mt-3 p-1 d-flex justify-content-center align-items-center cursor-pointer rounded'
+      style={{ backgroundColor: '#9DC08B' }}
       onClick={()=>navigate(path as To)}
     >
       <p className='m-0' >{title}</p>

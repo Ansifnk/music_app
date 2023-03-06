@@ -18,7 +18,7 @@ const useAuth = () => {
             setUserToken(keycloak.token??'')
         }).catch((err) => {
             console.log(err)
-            // alert('failed to initialize');
+            alert('failed to initialize auth');
         });
     }
     useEffect(() => {

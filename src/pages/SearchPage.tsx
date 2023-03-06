@@ -575,7 +575,7 @@ const SearchPage = () => {
     // const [musics, setMusics] = useState<Music[]>([])
   const [musics, setMusics] = useState<Music[]>(data.tracks.hits.map((m: any) => ({ title: m.track.title,subTitle:m.track.subtitle,coverImage:m.track.images.background })))
     return (
-        <div className=' m-0 p-0 container'  >
+        <div className='m-0 p-0 container'  >
             <div className='py-5 px-3' style={{ backgroundColor: "#3795BD" }} >
                 <h2 className='text-white ' >Search For fascinating musics</h2>
             </div>

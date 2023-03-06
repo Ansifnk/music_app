@@ -26,7 +26,7 @@ const MusicItem: FC<ItemProps> = ({ music }) => {
                 </div>
                 <img src={music.coverImage} className='p-0 m-0 img-fluid max-width rounded' />
 
-                <p className='p-0 m-0 text-center' >{music.title}</p>
+                <p className='p-2 m-0 text-center' >{music.title.split('(')[0]}</p>
 
 
             </div>

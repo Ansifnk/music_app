@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import AddPlaylistModal from '../components/AddPlaylistModal'
+import PlayListItem from '../components/PlayListItem'
 import { useAppSelector } from '../store/store'
 
 const PlayListsPage = () => {
@@ -15,7 +16,7 @@ const PlayListsPage = () => {
                 <div className=' py-5 px-3 d-flex justify-content-between' style={{ backgroundColor: "#3795BD" }} >
                     <h2 className='text-white ' >Browse your lists</h2>
                     <Button variant="primary" onClick={() => setShowModal(true)}>
-                       Add new
+                        Create Playlist
                     </Button>
                 </div >
                 {playlists.length == 0 ?
@@ -24,7 +25,7 @@ const PlayListsPage = () => {
                     </div> :
                     <div className='p-3 row '>
                         {
-                            playlists.map((list) => <p>{list}</p>)
+                            playlists.map((name) => <PlayListItem name={name } />)
                         }
                     </div>}
             </div>
