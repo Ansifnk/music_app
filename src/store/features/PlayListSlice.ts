@@ -9,7 +9,7 @@ interface PlayListState {
 
 
 const initialState: PlayListState = {
-    lists: []
+    lists:  JSON.parse(localStorage.getItem('playlists') ?? '[]')??[]
 }
 
 export const playListsSlice = createSlice({
@@ -19,6 +19,7 @@ export const playListsSlice = createSlice({
         AddList: (state, action: PayloadAction<string>) => {
             // console.log(action.payload,'ac')
             state.lists.push(action.payload)
+            localStorage.setItem('playlists', JSON.stringify(state.lists))
             alert('Play list created')
         }
     }
