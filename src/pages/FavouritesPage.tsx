@@ -13,7 +13,7 @@ const FavouritesPage = () => {
             </div >
             {favourites.length == 0 ?
                 <div className='d-flex mt-5 align-items-center justify-content-center' >
-                    <h3>Favourites is empty</h3>
+                    <h6 className='text-secondary' >Favourites is empty</h6>
                 </div> :
                 <div className='p-3 row '>
                     {

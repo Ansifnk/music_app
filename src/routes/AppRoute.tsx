@@ -16,26 +16,8 @@ const AppRoute = () => {
 
     const user = useAuth()
 
-    const dispatch = useDispatch()
 
-    const getSaved = async () => {  // inorder to get previously saved playlists and favourites
-
-        
-
-        // if (favs) {
-        //     dispatch(addFav(favs))
-        // }
-        // if (playlists) {
-        //     dispatch(AddList(playlists))
-        // }
-
-    }
-
-    useEffect(() => {
-        getSaved()
-    }, [])
-
-
+    
     return (
         <Routes>
 

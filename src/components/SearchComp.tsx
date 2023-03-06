@@ -21,7 +21,7 @@ const SearchComp: FC<ItemProps> = ({ setMusics }) => {
             url: 'https://shazam.p.rapidapi.com/search',
             params: { term: searchKey.term, locale: 'en-US', offset: '0', limit: '20' },
             headers: {
-                'X-RapidAPI-Key': '2e5ff894aamsh51aafc06fb8cbbcp176d9djsn47613e8cba00',
+                'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
                 'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
             }
         };
@@ -42,7 +42,7 @@ const SearchComp: FC<ItemProps> = ({ setMusics }) => {
             url: 'https://shazam.p.rapidapi.com/auto-complete',
             params: { term: query, locale: 'en-US' },
             headers: {
-                'X-RapidAPI-Key': '38a1e3d97amshe5d5d1edf6a3e88p1f6914jsnaf0916c9ae04',
+                'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
                 'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
             }
         };

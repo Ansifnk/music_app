@@ -21,11 +21,11 @@ const PlayListsPage = () => {
                 </div >
                 {playlists.length == 0 ?
                     <div className='d-flex mt-5 align-items-center justify-content-center' >
-                        <h3>Play list is empty</h3>
+                        <h6 className='text-secondary' >Playlist is empty.</h6>
                     </div> :
                     <div className='p-3 row '>
                         {
-                            playlists.map((name) => <PlayListItem name={name } />)
+                            playlists.map((name) => <PlayListItem name={name} />)
                         }
                     </div>}
             </div>

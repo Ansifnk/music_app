@@ -5,7 +5,6 @@ const useAuth = () => {
     const isRunRef = useRef(false)
 
     const [loggedIn, setLoggedIn] = useState(false)
-    const [userToken,setUserToken]=useState('')
 
     const keyCloakHandler = () => {
         const keycloak = new Keycloak({
@@ -15,7 +14,6 @@ const useAuth = () => {
                   })
         keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
             setLoggedIn(authenticated)
-            setUserToken(keycloak.token??'')
         }).catch((err) => {
             console.log(err)
             alert('failed to initialize auth');

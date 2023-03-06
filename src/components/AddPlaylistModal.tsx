@@ -19,7 +19,6 @@ const AddPlaylistModal: FC<Props> = ({ show, handleClose }) => {
     return (
         <div
             className="modal show"
-            style={{ display: 'block', position: 'initial' }}
         >
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -34,7 +33,7 @@ const AddPlaylistModal: FC<Props> = ({ show, handleClose }) => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Cancel
                     </Button>
                     <Button variant="primary" onClick={() => { dispatch(AddList(name)); handleClose() }}>
                         Add
