@@ -38,7 +38,7 @@ const HomePage = () => {
           <a role='button' className="link-primary" onClick={() => navigate('/favourites')} >Show more</a>
         </div>
         {favourites.length > 0 ? <div className='row' >
-          {favourites.slice(0, 4).map((music) => <MusicItem music={music} />)}
+          {favourites.slice(0, 4).map((music) => <MusicItem music={music} favourite />)}
         </div> : <div className='mt-5 d-flex justify-content-center' >
           <p className='text-secondary' >No Music added to favourites</p>
         </div>}

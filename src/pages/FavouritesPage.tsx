@@ -17,7 +17,7 @@ const FavouritesPage = () => {
                 </div> :
                 <div className='p-3 row '>
                     {
-                        favourites.map(music => <MusicItem music={music} />)
+                        favourites.map(music => <MusicItem music={music} favourite />)
                     }
                 </div>
             }
